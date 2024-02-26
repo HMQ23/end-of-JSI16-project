@@ -1,9 +1,9 @@
 import {
   collection,
   doc,
-  getDocs,
   getFirestore,
   setDoc,
+  getDocs,
 } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 
 import { db } from "./firebase.js";
@@ -32,10 +32,38 @@ registerForm.addEventListener("submit", (event) => {
   } else if (repassword != password) {
     alert("Passwords are not the same");
   } else {
-    setDoc(doc(db, "users", `${name}`), {
-      email: email,
-      password: password,
-    });
-    alert("account created!");
+    async function checkData(email, password, name) {
+      const querySnapshot = await getDocs(collection(db, "users"));
+      let count = 0;
+
+      try {
+        querySnapshot.forEach((user) => {
+          if (name == user.data().name || email == user.data().email) {
+            throw new Error("Break the loop");
+          }
+        });
+      } catch (error) {
+        count += 1;
+      }
+
+      if (count == 0) {
+        setDoc(doc(db, "users", `${name}`), {
+          name: name,
+          email: email,
+          password: password,
+        });
+        localStorage.setItem(
+          "user",
+          JSON.stringify({ name: name, email: email, password: password })
+        );
+        alert("account created!");
+        // window.location.href = "/cuoikhoa/CUD/html/dashboard.html";
+      } else {
+        alert("account already exists!, please sign in");
+        // window.location.href = "signin.html";
+      }
+    }
+
+    checkData(email, password, name);
   }
 });

@@ -17,15 +17,32 @@ registerForm.addEventListener("submit", (event) => {
   let password = registerForm.password.value.trim();
   let name = registerForm.name.value.trim();
 
-  // const docRef = doc(db, "user", `${name}`);
-  // const docSnap = getDocs(docRef);
-  // console.log("docSnap: ", docSnap.email);
+  async function checkData(email, password, name) {
+    const querySnapshot = await getDocs(collection(db, "users"));
+    let count = 0;
 
-  const querySnapshot = getDocs(collection(db, "users"));
-  querySnapshot.forEach((doc) => {
-    // doc.data() is never undefined for query doc snapshots
-    console.log(doc.id, " => ", doc.data());
-  });
+    try {
+      querySnapshot.forEach((user) => {
+        if (
+          name == user.data().name &&
+          email == user.data().email &&
+          password == user.data().password
+        ) {
+          throw new Error("Break the loop");
+        }
+      });
+    } catch (error) {
+      count += 1;
+    }
+
+    if (count == 1) {
+      alert("account founded!");
+    } else {
+      alert("account NOT founded!");
+    }
+  }
+
+  checkData(email, password, name);
 
   // fetch("http://localhost:3000/user")
   // .then((response) => response.json())

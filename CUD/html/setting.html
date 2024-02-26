@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Metamorphous&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../css/CUD.css" />
+    <!-- <link rel="stylesheet" href="responsive.css" /> -->
+
+    <title>Setting</title>
+  </head>
+  <body>
+    <div class="NF">
+      <!-- for header part -->
+      <header>
+        <a href="/index/home/html/index.html" class="logosec">
+          <img
+            src="/images/Logo.png"
+            class="icn menuicn"
+            id="menuicn"
+            alt="menu-icon"
+          />
+        </a>
+
+        <div class="message">
+          <div class="circle"></div>
+          <img src="/images/bell.png" class="icn" alt="" />
+          <div class="dp">
+            <img src="/images/user.png" class="dpicn" alt="dp" />
+          </div>
+        </div>
+      </header>
+
+      <div class="main-container">
+        <div class="navcontainer">
+          <nav class="nav">
+            <div class="nav-upper-options">
+              <a href="./dashboard.html" class="nav-option option2">
+                <img src="/images/apps.png" class="nav-img" alt="dashboard" />
+                <h3>Dashboard</h3>
+              </a>
+
+              <a href="./add.html" class="nav-option option3">
+                <img src="/images/add-document.png" class="nav-img" alt="add" />
+                <h3>Add</h3>
+              </a>
+
+              <a href="./products.html" class="nav-option option5">
+                <img src="/images/file-edit.png" class="nav-img" alt="update" />
+                <h3>Products</h3>
+              </a>
+
+              <div class="nav-option option1">
+                <img
+                  src="/images/settings.png"
+                  class="nav-img"
+                  alt="settings"
+                />
+                <h3>Settings</h3>
+              </div>
+
+              <div class="nav-option logout" onclick="logOut()">
+                <img src="/images/exit.png" class="nav-img" alt="logout" />
+                <h3>Logout</h3>
+              </div>
+            </div>
+          </nav>
+        </div>
+
+        <br />
+        <label for="delete-acc" style="padding: 20px"
+          >Are you sure you want to delete this account?</label
+        >
+        <button
+          class="delete-acc"
+          type="button"
+          style="margin-top: 17px; width: 100px; height: 25px"
+          onclick="deleteAcc()"
+        >
+          Yes
+        </button>
+      </div>
+    </div>
+
+    <script src="../js/CUD.js"></script>
+  </body>
+</html>
