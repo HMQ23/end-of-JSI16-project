@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Metamorphous&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="shortcut icon"
+      href="/cuoikhoa/images/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./inout.css" />
+
+    <title>Sign up</title>
+  </head>
+  <body>
+    <div class="wrapper fadeInDown">
+      <div id="formContent">
+        <!-- Tabs Titles -->
+        <a href="./signin.html"
+          ><h2 class="inactive underlineHover">Sign In</h2></a
+        >
+        <h2 class="active">Sign Up</h2>
+
+        <!-- Icon -->
+        <div class="fadeIn first">
+          <a href="/cuoikhoa/user/html/index.html">
+            <img
+              src="/cuoikhoa/images/Logo.png"
+              id="icon"
+              alt="User Icon"
+              style="width: 50px; height: 50px"
+            />
+          </a>
+        </div>
+
+        <!-- Login Form -->
+        <form id="register-form">
+          <input
+            type="text"
+            id="name"
+            class="fadeIn second"
+            name="name"
+            placeholder="Name"
+          />
+          <input
+            type="email"
+            id="email"
+            class="fadeIn second"
+            name="email"
+            placeholder="Email"
+          />
+          <input
+            type="password"
+            id="password"
+            class="fadeIn third"
+            name="password"
+            placeholder="Password"
+          />
+          <input
+            type="password"
+            id="repassword"
+            class="fadeIn third"
+            name="repassword"
+            placeholder="Retype password"
+          />
+          <button
+            type="submit"
+            class="fadeIn fourth submit-button"
+            style="cursor: pointer; background-color: var(--red)"
+          >
+            Sign up
+          </button>
+        </form>
+
+        <div id="formFooter">
+          <a>Have account?</a>
+          <a class="underlineHover" href="./signin.html">Sign in</a>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="./signup.js"></script>
+  </body>
+</html>

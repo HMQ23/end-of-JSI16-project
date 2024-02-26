@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Metamorphous&display=swap"
+      rel="stylesheet"
+    />
+    <!-- <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"
+    /> -->
+    <link
+      rel="stylesheet"
+      href="https://kit.fontawesome.com/367278d2a4.css"
+      crossorigin="anonymous"
+    />
+    <!-- <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    /> -->
+    <link
+      rel="shortcut icon"
+      href="/cuoikhoa/images/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <!-- <link rel="stylesheet" href="../css/responsive.css" /> -->
+
+    <title>Spring library</title>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header>
+      <nav>
+        <!-- LOGO -->
+        <div class="img-nav">
+          <img src="/cuoikhoa/images/Logo.png" alt="" />
+        </div>
+
+        <!-- MENU BAR -->
+        <div class="content-nav">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Books</a></li>
+            <li><a href="#">Contacts</a></li>
+            <li><a href="/outin/signup.html">iAccount</a></li>
+          </ul>
+
+          <!-- SEARCH -->
+          <form>
+            <input type="text" name="search" placeholder="Harry Potter" />
+            <button title="submit" type="submit">
+              <i class="fa fa-search" aria-hidden="true"></i>
+            </button>
+          </form>
+        </div>
+
+        <!-- CART -->
+        <button id="cart">
+          <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+          Shopping Cart
+        </button>
+
+        <div id="myModal" class="modal">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Your Cart</h5>
+              <span class="close">&times;</span>
+            </div>
+
+            <div class="modal-body">
+              <!-- TITLE -->
+              <div class="cart-row">
+                <span class="cart-item cart-header cart-column">Products</span>
+                <span class="cart-price cart-header cart-column">Price</span>
+                <span class="cart-quantity cart-header cart-column"
+                  >Amounts</span
+                >
+              </div>
+
+              <!-- PRODUCTS -->
+              <div class="cart-items">
+                <!-- <div class="cart-row">
+                  <div class="cart-item cart-column">
+                    <img
+                      class="cart-item-image"
+                      src="https://bizweb.dktcdn.net/thumb/large/100/228/168/products/sualai.jpg?v=1573720306000"
+                      width="100"
+                      height="100"
+                    />
+                    <span class="cart-item-title">Mũi Hàn 500</span>
+                  </div>
+                  <span class="cart-price cart-column">25000đ</span>
+                  <div class="cart-quantity cart-column">
+                    <input
+                      class="cart-quantity-input"
+                      type="number"
+                      value="1"
+                    />
+                    <button class="btn btn-danger" type="button">Xóa</button>
+                  </div>
+                </div> -->
+              </div>
+
+              <!-- TOTAL TITLE -->
+              <div class="cart-total">
+                <strong class="cart-total-title">Total:</strong>
+                <span class="cart-total-price"></span>
+              </div>
+            </div>
+
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary close-footer">
+                Close
+              </button>
+              <button type="button" class="btn btn-primary order">
+                Purchase
+              </button>
+            </div>
+
+            <!-- <div class="modal-footer">
+              <button type="button" class="btn btn-secondary close-footer">
+                Close
+              </button>
+              <button type="button" class="btn btn-primary order">
+                Purchase
+              </button>
+            </div> -->
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- content -->
+    <section class="wrapper">
+      <div class="products">
+        <ul class="products-list"></ul>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer>
+      <div class="footer-item">
+        <div class="img-footer">
+          <img src="/images/Logo.png" alt="" />
+        </div>
+        <div class="social-footer">
+          <li>
+            <a target="_blank" href="#" rel="noopener" title="Facebook">
+              <i class="fa fa-facebook-square" aria-hidden="true"></i>
+            </a>
+          </li>
+
+          <li>
+            <a target="_blank" href="#" rel="noopener" title="Github">
+              <i class="fa fa-github-square" aria-hidden="true"></i>
+            </a>
+          </li>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../js/scripts.js"></script>
+  </body>
+</html>
